@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <a href="Profile.html" class="w3-bar-item w3-button">Profile</a>
+        <a href="Stats.html" class="w3-bar-item w3-button">Stats</a>
+        <a href="Setting.html" class="w3-bar-item w3-button">Setting</a>
+        <a href="Home.html" class="w3-bar-item w3-button">Home</a>
+    </div>
+
+    <div id="main">
+        <div class="topnav">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <a href="Login.html">sign out</a>
+            <a href="Home.html">Home</a>
+        </div>
+
+        <div class="main-content">
+            <div class="box">
+                <button class="button button1"><a href="Income.html">Income</a></button>
+                <button class="button button2"><a href="Expense.html">Expense</a></button>
+                <select>
+                    <option value="Day">Day</option>
+                    <option value="Week">Week</option>
+                    <option value="Month">Month</option>
+                    <option value="Year">Year</option>
+                    <option value="Period">Period</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="box">
+                <h2>Expense</h2>
+                  <input>&nbsp;THB 
+                  <input>&nbsp;<i class="fa fa-calendar"></i>
+            </div>
+
+            <div class="box">
+              <h2>Category</h2>
+                <button class="btn"> <i class="fa fa-plus"></i></button> 
+                <button class="boxtext2" style="color:red ;">food</button>
+                <button class="boxtext2" style="color:red ;">transpot</button>
+                <button class="boxtext2" style="color:red ;">rent</button>
+                <button class="boxtext2" style="color:red ;">geoceries</button>
+                <button class="boxtext2" style="color:red ;">education</button>
+            </div>
+
+            <div class="box">
+              <h2>Note</h2>
+              <p class="boxtext1"></p>
+            </div>
+
+            <div class="box">
+              <button class="button button1"><a href="Home.html">Add</a></button>
+              <button class="button button2"><a href="Home.html">Cancel</a></button>
+            </div>
+
+        </div>
+    </div>
+    <footer class="bottom-footer">
+        <p>About this website</p>
+        <p>Copyright 2070</p>
+    </footer>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
+</body>
+
+</html>
